@@ -1,9 +1,8 @@
 html{
-    background: #313131;
-    padding: 0 20px;
+    background: #313131; 
 }
 body{
-    font-family: 'georgia',tahoma,  arial;
+    font-family: georgia, tahoma, arial;
     color: #999;
     background-color: #fff;
 }
@@ -56,11 +55,6 @@ small{
     font-size: 12px;
     margin:0;
 }
-img{
-    color:white;
-    background-color: #313131;
-    text-align: center;
-}
 /****************** NAV BAR *************/
 .container-fluid{
     padding: 0 20px;
@@ -90,17 +84,30 @@ body > .container-fluid{
 }
 .nav.navbar-nav.navbar-right li a{
     height: 100px;
-    padding: 50px 25px 25px;
+    padding: 45px 25px 15px;
 }
-.container-fluid .navbar-header>button.navbar-toggle,
-.container-fluid .navbar-header>button.navbar-toggle:hover,
-.container-fluid .navbar-header>button.navbar-toggle:active,
-.container-fluid .collapse.navbar-collapse a:hover,
-.container-fluid .collapse.navbar-collapse li.active a:active,
-.container-fluid .collapse.navbar-collapse li.active a:visited,
-.container-fluid .collapse.navbar-collapse li.active a{
+.nav.navbar-nav.navbar-right li a:hover{
     background-color: #a7c353;
-    border:none;
+}
+.navbar-inverse .navbar-toggle{
+    background-color: #a7c353;
+    border-color: #a7c353;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+     background-color: #a7c353;
+}
+.navbar-inverse .navbar-nav > .active > a
+.navbar-inverse .navbar-nav > .active > a:active,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:visited,
+{
+    background-color: #a7c353;
+
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:focus, 
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #a7c353;
 }
 /********* BLOQUOTE ********/
 blockquote{
@@ -110,58 +117,67 @@ blockquote{
     font-style: italic;
 }
 /********** CAROUSEL ********/
+.carousel {
+position : relative;
+}
+.carousel-slide   {
+    width: 920px;
+}
+.item {
 
-.carousel.slide  
-{
-    margin: 0 20px;
-    height: 425px;
 }
-
-.carousel-inner{
-    height: 350px;
-    position:relative;
+.img-responsive {
+width : 100%;
+height : 350px !important ;
 }
-.item{
-    height: 100%;
+.item .carousel-caption {
+position : absolute;
+right : 7%;
+left : 60%;
+width : 33%;
 }
-.carousel-inner .item > img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.item .carousel-caption > h2 {
+width : 100%;
+top : 0;
+padding: 5px;
+font-size : 22px;
+background-color : #a7c353;
 }
-.carousel-caption{
-    height: 425px;
-    width: 35%;
-    left: 60%;
-    bottom:0; /*Review*/
-    padding: 0;
+.item .carousel-caption p{
+width : 100%;
+font-size : 13px;
+color: #999;
+margin-top : 20px;
+margin-bottom : 0;
+padding: 5px;
+background-color : #fff;
+text-shadow: 0 0 0 #fff;
+}
+.navbar-collapse.collapse.in{
+    border-top:0;
+}
+.navbar-collapse.collapsing{
+    border-top: 0;
+}
+/*********** Container text INFO **********/
+.left.carousel-control, .right.carousel-control{
+    border: 3px solid #a7c353;
+    background-color: #000;
+    color: #a7c353;
+    height: 55px;
+    width: 55px;  
+    top: 150px;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 36px;
 }
 .left.carousel-control{
-    border: 3px solid #a7c353;
-    background-color: #000;
-    height: 55px;
-    width: 55px;
     left: 15px;
-    top: 150px;
-    border-radius: 50%;
-    padding: 10px;
 }
 .right.carousel-control{
-    border: 3px solid #a7c353;
-    background-color: #000;
-    height: 55px;
-    width: 55px;
-    right: 15px;
-    top: 150px;
-    border-radius: 50%;
-    padding: 10px;
+     right: 15px;
 }
-.carousel-control img{
-    height: 100%;
-    width: 100%;
-    background-color:#000;
-    border-radius: 50%;
-}
+
 ol.carousel-indicators li{
     background-color: #a7c353;
     border: 3px solid #a7c353;
@@ -170,28 +186,10 @@ ol.carousel-indicators li.active{
     background-color: #fff;
     border: 3px solid #a7c353;
 }
-.item .carousel-caption{
-    height: 210px;
-    top: 200px;
-}
-.carousel-caption h2{
-    background-color: #a7c353;
-    color: #fff;
-    padding: 15px;
-    margin: 0 0 10px 0;
-}
-.carousel-caption p{
-    background-color: #fff;
-    color: #999;
-    text-shadow: 0 0 0 #fff;
-    padding: 14px;
-}
-
 /*********** Container text INFO **********/
 .container.text-left{
     margin: 0;
     width: 100%;
-    border-top: 2px solid #e2e2e2;
     padding: 0;	
 }
 .container.text-left .row{
@@ -209,7 +207,7 @@ ol.carousel-indicators li.active{
     margin-bottom: 30px;
 }
 .container.text-left .row .col-xs-12.col-sm-4 > img{
-    width: 100%;
+    width: 350px;
     height: 140px;
     margin-bottom: 20px;
 }
@@ -224,11 +222,11 @@ ol.carousel-indicators li.active{
 .col-xs-12.col-sm-4 .well > img{
     width: 64px;
     height: 64px;
-    float:left;
+    float: left;
     margin: 0 20px 20px 0;
     background-color: #313131;
 }
-.col-xs-12.col-sm-4>.well{
+.col-xs-12.col-sm-4 > .well{
     clear: both;
 }
 .well h3 span{
@@ -237,6 +235,7 @@ ol.carousel-indicators li.active{
 .well>p>img{
     width: 20px;
     position: relative;
+    margin-right: 5px;
     top: -5px;
     background-color: #fff;
 }
@@ -249,9 +248,6 @@ ol.carousel-indicators li.active{
     color: #999;
 
 }
-.container.text-left.lastdiv>.row{
-    margin: 0;
-}
 .col-xs-12.col-sm-6.col-md-3>h3{
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -260,7 +256,6 @@ ol.carousel-indicators li.active{
 }
 .col-xs-12.col-sm-6.col-md-3{
     padding: 0 20px;
-    margin: 0;
 }
 .col-xs-12.col-sm-6.col-md-3>p{
     font-size: 12px;
@@ -268,20 +263,24 @@ ol.carousel-indicators li.active{
 .col-xs-12.col-sm-6.col-md-3>p>span{
     font-size: 11px;
 }
-.col-xs-12.col-sm-6.col-md-3 ul{
-    padding: 0;
+.block{
+    border-bottom: 2px solid  #383838;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: relative;
 }
-.col-xs-12.col-sm-6.col-md-3 ul li{
-    list-style-type: none;
-    padding: 15px 0;
-    margin: 0;
-    border-bottom: 2px solid #383838;
-}
-.col-xs-12.col-sm-6.col-md-3 ul li img{
+.fa-linkedin ,.fa-facebook, .fa-github, .fa-free-code-camp{
     background-color: #383838;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #383838;
+    margin-right: 5px;
+    border-radius: 50%;  
+}
+a.social{
+    position:absolute;
+    left: 50px;
+    top: 10px;
 }
 .form-group input,.form-group textarea{
     background-color: #383838;
@@ -310,20 +309,15 @@ ol.carousel-indicators li.active{
     top: 20px;
 }
 
-/******************* MOBILE ************************/
-@media (max-width: 768px) {
-    .nav.navbar-nav.navbar-right li a{
-        height: 42px;
-        padding: 12px;
-    }
+/******************* RESPONSIVE ************************/
+
+@media (max-width: 360px) {  /*Mobile*/
+    
     .container-fluid, .navbar.navbar-inverse, .navbar.navbar-inverse > .container-fluid,
     .navbar-header,.collapse.navbar-collapse,.nav.navbar-nav.navbar-right,.nav.navbar-nav.navbar-right li,
     .navbar-header h1{
         padding: 0;
         margin: 0;
-    }
-    .navbar-header{
-        padding-left: 20px;
     }
     .navbar.navbar-inverse{
         margin: 0 20px;
@@ -332,28 +326,27 @@ ol.carousel-indicators li.active{
     .carousel-caption { /* Hide the carousel text when the screen is less than 768 pixels wide */
         display: none; 
     }
-    .carousel-inner .item{
-        overflow-x: hidden;
-    }
-    .carousel-inner .item > img{
-        width: 900px;
-    }
+    
 }
-@media (max-width: 1000px){   /*For Tablet*/
+@media (max-width: 768px){   /*For Tablet*/
+    .navbar-header,.collapse.navbar-collapse {
+     padding-left: 20px;
+     padding-right: 20px;
+    }
     .nav.navbar-nav.navbar-right li a{ 
-        padding-left: 6px;
-        padding-right: 6px;
+        padding: 20px 5px;
+        height: 50px;
     }
-    .carousel-caption{ 
-        width: 50%;
-        left: 45%;
+    .item .carousel-caption{ 
+        width: 80%;
+        left: 10%;
     }
-
+    .item{
+    width: 100%;
+    }
+    .item > img{
+        width: 100%;
+    }
 }
 
-/*************** FONTS ************/
-@font-face{
-    font-family: 'georgia';
-    src: url('fonts/georgia.ttf')
-}
 
